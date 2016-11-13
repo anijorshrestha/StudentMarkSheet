@@ -70,6 +70,7 @@ if(isset($_POST["submit"])){
     settype($total_marks,int);
     settype($semester,int);
 
+
     $res = mysql_query("UPDATE student SET name='$name',total_marks = '$total_marks',semester='$semester'   WHERE id='$id'")
 
     or die(mysql_error());
