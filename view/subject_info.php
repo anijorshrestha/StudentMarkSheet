@@ -37,9 +37,11 @@
             echo '<td>' . $row['name'] . '</td>';
             echo '<td>' . $row['total_marks'] . '</td>';
             echo '<td>' . $row['semester'] . '</td>';
+            echo '<td>'. '<a href="edit_subject.php?id=<?php echo $row["id"];?>Edit</a>'.'</td>';
             echo "</tr>";
         }
     ?>
+
     </tbody>
 </table>
 
