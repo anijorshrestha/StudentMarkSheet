@@ -36,11 +36,14 @@
                 while($row = mysql_fetch_array( $result)){
                     $count++;
                     echo "<tr>";
-                    echo '<td scope="row">' . $row['id'] . '</td>';
+                    echo '<td scope="row">' . $count . '</td>';
                     echo '<td>' . $row['name'] . $row['id']. '</td>';
                     echo '<td>' . $row['total_marks'] . '</td>';
                     echo '<td>' . $row['semester'] . '</td>';
-                    echo '<td><a href="../edit_subject.php?id= '.$row['id'].'"><button type="button" class="btn btn-success">Edit</button> </a> &nbsp;&nbsp;<a href="../../controller/studentController.php?delete=' .$row['id'].'"><button type="button" class="btn btn-danger">Delete</button> </a> </td>';
+                    echo '<td>
+                        <a href="../subject/editSubject.php?id='.$row['id'].'"><button type="button" class="btn btn-success">Edit</button> </a>
+                        &nbsp;&nbsp;
+                        <a href="../subject/delete_subject.php?id='.$row['id'].'"><button type="button" class="btn btn-danger">Delete</button> </a> </td>';
                     echo "</tr>";
                 }
                 ?>
